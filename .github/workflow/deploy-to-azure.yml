@@ -14,7 +14,7 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: Install dependencies
-        run: dotnet restore ./WeatherForecast.csproj
+        run: dotnet restore ./WeatherForecast-GitHub.csproj
 
       - name: Build
-        run: dotnet build ./WeatherForecast.csproj --configuration Release --no-restore
+        run: dotnet build ./WeatherForecast-GitHub.csproj --configuration Release --no-restore
