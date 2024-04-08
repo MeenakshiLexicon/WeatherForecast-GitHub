@@ -8,4 +8,8 @@
     <RootNamespace>WeatherForecast_GitHub</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflow\deploy-to-azure.yml" />
+  </ItemGroup>
+
 </Project>

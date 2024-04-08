@@ -1,0 +1,20 @@
+﻿name: Deploy to Azure
+on: 
+workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  
+    steps: 
+      - uses: actions/checkout@v3
+  
+      - name: Setup .Net Core
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: 8.0.x
+
+      - name: Install dependencies
+        run: dotnet restore ./WeatherForecast.csproj
+
+      - name: Build
+        run: dotnet build ./WeatherForecast.csproj --configuration Release --no-restore
